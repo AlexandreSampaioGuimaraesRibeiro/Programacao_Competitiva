@@ -40,9 +40,8 @@ class Solution:
 
 ## Foto da Submissão
 
-```md
+
 ![alt text](image-2.png)
-```
 
 ## Lógica
 
@@ -116,9 +115,9 @@ for _ in range(t):
 
 ## Foto da Submissão
 
-```md
+
 ![alt text](image-1.png)
-```
+
 
 ## Lógica
 
