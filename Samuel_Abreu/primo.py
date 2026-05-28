@@ -1,21 +1,41 @@
-import math
-
-def eh_primo(n):
-    if n < 2:
-        return False
-    if n == 2:
-        return True
-    if n % 2 == 0:
-        return False
-    for i in range(3, int(math.isqrt(n)) + 1, 2):
-        if n % i == 0:
-            return False
-    return True
+lista = []
+contador = 0
 
 t = int(input())
-for _ in range(t):
+
+while contador < t:
+
     n = int(input())
-    if eh_primo(n):
+
+    lista.append(n)
+
+    contador += 1
+
+
+for num in lista:
+
+    if num == 2:
         print("YES")
-    else:
+
+    elif num < 2 or num % 2 == 0:
         print("NO")
+
+    else:
+
+        primo = True
+
+        i = 3
+
+        while i * i <= num:
+
+            if num % i == 0:
+                primo = False
+                break
+
+            i += 2
+
+        if primo:
+            print("YES")
+
+        else:
+            print("NO")
