@@ -41,7 +41,7 @@ class Solution:
 ## Foto da Submissão
 
 ```md
-![alt text](image.png)
+Samuel_Abreu/image.png
 ```
 
 ## Lógica
@@ -117,7 +117,7 @@ for _ in range(t):
 ## Foto da Submissão
 
 ```md
-![alt text](<Captura de tela 2026-05-28 163053.png>)
+Samuel_Abreu/Captura de tela 2026-05-28 163053.png
 ```
 
 ## Lógica
