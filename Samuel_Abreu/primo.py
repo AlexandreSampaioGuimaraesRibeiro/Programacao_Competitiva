@@ -1,26 +1,45 @@
-lista = []
-contador = 0
-t = int(input("digite a quantidade de números que quer testar:"))
-if not t <= 500:
-    print ("a quantidade de números deve ser menor que 500")
-else:
-    while contador < t: 
-        n = int(input("digite aqui o número que quer testar se é primo ou não: "))
-        lista.append(n)
-        contador += 1
-for num in lista:
-    contador_divisor = 0
-    for i in range (1,num+1):
-        if num%i == 0:
-            contador_divisor += 1
-for num in lista:
-    print (num)
-for num in lista:
-    contador_divisor = 0
-    for i in range (1,num+1):
-        if num%i == 0:
-            contador_divisor += 1
-    if contador_divisor > 2:
-        print ("NÃO")
-    elif contador_divisor == 2:
-        print ("SIM")
+def miller_rabin(n, a):
+    if n % a == 0:
+        return n == a
+
+    r = 0
+    d = n - 1
+    while d % 2 == 0:
+        r += 1
+        d = d // 2
+    
+    x = pow(a, d, n)
+
+    if x == 1 or x == n - 1:
+        return True
+
+    for _ in range(r - 1):
+        x = pow(x, 2, n)
+        if x == n - 1:
+            return True
+
+    return False
+
+
+def e_primo(n):
+    if n < 2:
+        return False
+
+    bases = [2, 3, 5, 7, 11, 13, 17, 19, 23, 29, 31, 37]
+
+    for a in bases:
+        if not miller_rabin(n, a):
+            return False
+
+    return True
+
+
+t = int(input())
+
+for _ in range(t):
+    n = int(input())
+
+    if e_primo(n):
+        print("SIM")
+    else:
+        print("NÃO")
