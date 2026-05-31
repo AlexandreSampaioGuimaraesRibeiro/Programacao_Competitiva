@@ -1,0 +1,3 @@
+# Logica do problema
+
+Neste problema é necessario calcular a quantidade de folhas que se terá em uma arvore no ano X, com base na quantidade de folhas que se teve em anos anteriores (onde a quantidade é x^x) e no tempo em que estás folhas ficam na arvore, com isso pegamos o ano X e o tempo de duração das folhas Y e o conjunto das folhas de cada ano F e colocamos em uma função L que lé qual ano X se refere e soma a quantidade de folhas de todos os anos antecedentes, incluindo X, (∀(X-Y)<=X) que permanecem na arvore, com a quantidade de folhas na arvore no ano X, conferimos se ela é par ou ímpar, se for par retornamos TRUE e se caso for ímapar retornamos FALSE.

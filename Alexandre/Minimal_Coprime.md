@@ -1,0 +1,10 @@
+# Lógica do problema
+Neste problema, o objetivo é calcular a quantidade de Segmentos Mínimos Coprimos existentes dentro de um intervalo fechado que vai de $L$ até $R$.
+Um segmento é considerado coprimo se o Máximo Divisor Comum (MDC) entre suas duas extremidades for igual a 1 ($gcd(l, r) == 1$). Para que ele seja classificado como mínimo, ele não pode conter nenhum outro subsegmento coprimo menor dentro de si.
+Com base nas propriedades matemáticas do MDC, o algoritmo se apoia no fato de que dois números consecutivos são sempre coprimos entre si ($gcd(x, x+1) = 1$). A partir disso, o código deduz que existem apenas duas estruturas possíveis no universo que cumprem o requisito de serem mínimas:
+1 - O segmento $[1, 1]$ (pois $gcd(1, 1) = 1$ e ele não possui subsegmentos menores).
+2 - Pares consecutivos $[x, x+1]$, com $x \ge 2$ (qualquer segmento maior que isso conteria um par consecutivo dentro dele, deixando de ser mínimo).
+Para fazer essa contagem de forma rápida (em tempo constante $O(1)$, sem usar laços de repetição), a função contar_minimos_coprimos divide a busca no intervalo $[L, R]$ em duas partes:
+Parte A (Verificação de tamanho 1): Avalia se o segmento $[1, 1]$ está contido no intervalo dado. Isso só é verdade se o início do intervalo ($L$) for igual a 1. Se for, soma-se 1 ao total.
+Parte B (Contagem de tamanho 2): Calcula quantos pares consecutivos existem de 2 até o limite $R$. O código define matematicamente o limite inferior para o primeiro elemento do par como max(l, 2) e o limite superior como r - 1. A quantidade exata de pares é obtida diretamente pela fórmula de intervalo x_max - x_min + 1.
+Por fim, o programa recebe o número de casos de teste $T$, lê as extremidades $L$ e $R$ de cada cenário e imprime na tela o total de segmentos mínimos coprimos encontrados.
