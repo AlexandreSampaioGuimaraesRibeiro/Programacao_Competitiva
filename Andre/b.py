@@ -9,18 +9,15 @@ for i in range(vezes):
 
 def eh_primo(num):
     if num <= 1:
-        return False  # Números menores ou iguais a 1 não são primos
+        return False  
 
-    # Vamos testar os divisores de 2 até a raiz quadrada do número
-    # O "int(num ** 0.5)" é o jeito mais simples de achar a raiz quadrada em Python
     limite = int(num ** 0.5)
 
     for i in range(2, limite + 1):
         if num % i == 0:
-            return False  # Se achou qualquer divisor exato, não é primo
+            return False  
             
-    return True  # Se o loop acabou e não achou nada, ele é primo
-
+    return True  
 for elemento in lista:
     if math.sqrt(elemento).is_integer():
         raiz = math.sqrt(elemento)
