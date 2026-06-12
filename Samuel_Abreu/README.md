@@ -51,7 +51,10 @@ Após esses valores recebidos, eles são mandados para a função `myPow`, que v
 
 Após essa verificação, é utilizada a operação de potência, na qual o “x” é multiplicado por ele mesmo pela quantidade de vezes determinada pelo “n”, retornando o resultado final.
 
-No ponto de vista da computabilidade, esse código mostra condicionais em ação, verificando se um número pertence ao conjunto de entradas válidas para a realização da operação.
+Como o problema pode receber valores positivos e negativos para o expoente, a operação de potência utilizada já realiza automaticamente os cálculos necessários para cada caso, produzindo o resultado correto para entradas válidas.
+
+No ponto de vista da computabilidade, esse código mostra condicionais em ação, verificando se um número pertence ao conjunto de entradas válidas para a realização da operação. Além disso, a solução é composta por uma sequência finita de instruções que sempre produz um resultado para as entradas válidas do problema, caracterizando um algoritmo computável.
+
 
 ---
 
@@ -123,10 +126,10 @@ for _ in range(t):
 
 A lógica desse problema é verificar se um número é primo ou não.
 
-No primeiro método utilizado, eram feitas várias divisões do número por outros valores até sua raiz quadrada, verificando se existia algum divisor além de 1 e dele mesmo. Porém, para números muito grandes, esse método causava erro de tempo excedido (*Time Limit Exceeded*).
+No primeiro método utilizado, eram feitas várias divisões do número por outros valores até sua raiz quadrada, verificando se existia algum divisor além de 1 e dele mesmo. Porém, para números muito grandes, esse método causava erro de tempo excedido (*Time Limit Exceeded*), pois a quantidade de verificações crescia muito conforme o tamanho do número aumentava.
 
-Para resolver o problema, foi utilizado o algoritmo Miller-Rabin, que utiliza propriedades matemáticas dos números primos para verificar se o número se comporta como primo ou não.
+Para resolver o problema, foi utilizado o algoritmo Miller-Rabin, que utiliza propriedades matemáticas dos números primos para verificar se o número se comporta como primo ou não, sem a necessidade de testar todos os possíveis divisores.
 
-O algoritmo realiza cálculos utilizando exponenciação modular rápida (`pow(a, d, n)`), que serve para calcular o resto de uma exponenciação de forma eficiente, tornando a execução muito mais rápida mesmo para números extremamente grandes.
+O algoritmo realiza cálculos utilizando exponenciação modular rápida (`pow(a, d, n)`), que serve para calcular o resto de uma exponenciação de forma eficiente, tornando a execução muito mais rápida mesmo para números extremamente grandes. Dessa forma, é possível realizar os testes de primalidade dentro do limite de tempo exigido pela plataforma.
 
-No ponto de vista da computabilidade, esse código mostra como diferentes algoritmos podem resolver o mesmo problema, porém com eficiências diferentes (notação Big-O). Além disso, utiliza condicionais e propriedades matemáticas para decidir se o número pertence ao conjunto dos números primos ou não.
+No ponto de vista da computabilidade, esse código mostra como diferentes algoritmos podem resolver o mesmo problema, porém com eficiências diferentes (notação Big-O). Além disso, utiliza condicionais e propriedades matemáticas para decidir se o número pertence ao conjunto dos números primos ou não. A solução também evidencia a importância da escolha de algoritmos mais eficientes para garantir que um problema possa ser resolvido em tempo viável para os limites de entrada fornecidos.
