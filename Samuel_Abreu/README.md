@@ -20,11 +20,9 @@ Pasta destinada aos exercícios e atividades de programação competitiva da dis
 # Problema 1 — Pow(x, n)
 
 ## Link do Problema
-
 https://leetcode.com/problems/powx-n/description/
 
 ## link da aceitação 
-
 https://leetcode.com/problems/powx-n/submissions/2032448107
 
 ## Código
