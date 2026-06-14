@@ -70,7 +70,7 @@ https://www.spoj.com/problems/PON/
 
 ## link da aceitação 
 
-https://www.spoj.com/status/ns=35810294#
+https://www.spoj.com/status/ns=35811288#
 
 
 ## Código
@@ -92,7 +92,7 @@ def miller_rabin(n, a):
     if x == 1 or x == n - 1:
         return True
 
-    for _ in range(r - 1):
+    for z in range(r - 1):
         x = pow(x, 2, n)
 
         if x == n - 1:
@@ -101,7 +101,7 @@ def miller_rabin(n, a):
     return False
 
 
-def is_prime(n):
+def e_primo(n):
     if n < 2:
         return False
 
@@ -116,10 +116,10 @@ def is_prime(n):
 
 t = int(input())
 
-for _ in range(t):
+for i in range(t):
     n = int(input())
 
-    if is_prime(n):
+    if e_primo(n):
         print("YES")
     else:
         print("NO")
@@ -127,8 +127,10 @@ for _ in range(t):
 
 ## Foto da Submissão
 
-
 ![alt text](image-1.png)
+
+![alt text](image.png)
+
 
 
 ## Lógica

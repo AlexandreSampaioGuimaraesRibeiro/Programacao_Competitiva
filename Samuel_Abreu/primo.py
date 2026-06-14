@@ -36,7 +36,7 @@ def e_primo(n):
 
 t = int(input())
 
-for _ in range(t):
+for i in range(t):
     n = int(input())
 
     if e_primo(n):
