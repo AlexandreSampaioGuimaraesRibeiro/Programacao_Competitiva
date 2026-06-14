@@ -2,7 +2,7 @@
 
 ## Integrante
 
-Samuel Abreu
+Samuel Abreu Silva de Oliveira Bispo
 
 ---
 
