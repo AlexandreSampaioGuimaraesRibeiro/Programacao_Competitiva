@@ -23,6 +23,10 @@ Pasta destinada aos exercícios e atividades de programação competitiva da dis
 
 https://leetcode.com/problems/powx-n/description/
 
+## link da aceitação 
+
+https://leetcode.com/problems/powx-n/submissions/2032448107
+
 ## Código
 
 ```python
@@ -42,6 +46,8 @@ class Solution:
 
 
 ![alt text](image-2.png)
+
+
 
 ## Lógica
 
@@ -63,6 +69,11 @@ No ponto de vista da computabilidade, esse código mostra condicionais em ação
 ## Link do Problema
 
 https://www.spoj.com/problems/PON/
+
+## link da aceitação 
+
+https://www.spoj.com/status/ns=35810294#
+
 
 ## Código
 
