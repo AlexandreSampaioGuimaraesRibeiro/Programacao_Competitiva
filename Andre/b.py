@@ -10,16 +10,13 @@ for i in range(2, int(math.sqrt(limite)) + 1):
         for j in range(i * i, limite + 1, i):
             primo[j] = False
 
-
 n = int(input())
 
 numeros = list(map(int, input().split()))
 
-
 for numero in numeros:
-
     raiz = int(math.sqrt(numero))
-
+    
     if raiz * raiz == numero and primo[raiz]:
         print("YES")
     else:
